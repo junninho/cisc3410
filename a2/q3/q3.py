@@ -3,7 +3,6 @@ def num_to_list(file):
   with open(file) as f:
     for num in f:
       num = num.strip()
-      print(num)
       try:
         n = int(num)
         if n == -1:

@@ -19,7 +19,6 @@ def validation_sum(n):
 
   except ValueError:
     print("Invalid Number")
-  
 
 def main():
   user_input = input("Enter a number: ")
@@ -28,7 +27,6 @@ def main():
 
   print(f'Sum: {func_sum} \nValidation Check: {func_sum == check_sum}')
   
-
 if __name__ == '__main__':
     main()
     
