@@ -9,9 +9,13 @@ class Bagger:
   def check_order(self):
     for item in self.items:
       if item["name"] == "potato chips":
-        self.items.append({"name": "soft drink", "container_type": "plastic bottle", "size": "large", "frozen": False})
+        add_suggestion = input("Would you like to add a soft drink to your order? ").lower()
+        if add_suggestion == "y":
+          self.items.append({"name": "soft drink", "container_type": "plastic bottle", "size": "large", "frozen": False})
       elif item["name"] == "oreo cookies":
-        self.items.append({"name": "milk", "container_type": "plastic bottle", "size": "large", "frozen": False})
+        add_suggestion = input("Would you like to add a milk to your order? ").lower()
+        if add_suggestion == "y":
+          self.items.append({"name": "milk", "container_type": "plastic bottle", "size": "large", "frozen": False})
 
   # get bag at index
   def get_bag(self, index):
@@ -32,6 +36,8 @@ class Bagger:
     large_bottles = []
 
     bagging_order = [large_bottles, large, medium_frozen, medium, small]
+
+    self.check_order()
     
     for item in self.items:
       if item["size"] == "small":
